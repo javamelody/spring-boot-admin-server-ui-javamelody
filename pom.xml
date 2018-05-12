@@ -2,21 +2,22 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<parent>
+	<!--<parent>
 		<groupId>de.codecentric</groupId>
 		<artifactId>spring-boot-admin</artifactId>
 		<version>1.5.7</version>
-	</parent>
+	</parent>-->
 
 	<groupId>net.bull.javamelody</groupId>
 	<artifactId>spring-boot-admin-server-ui-javamelody</artifactId>
 	<version>1.5.7.0</version>
 
-    <properties>
-        <javamelody.version>1.72.0</javamelody.version>
+	<properties>
+		<javamelody.version>1.72.0</javamelody.version>
+		<sba.version>1.5.7</sba.version>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
+	</properties>
 
 	<name>JavaMelody - SpringBootAdmin</name>
 	<description>JavaMelody module for SpringBootAdmin v1</description>
@@ -63,14 +64,16 @@
 		<maven>3.0.4</maven>
 	</prerequisites>
 
-    <dependencies>
-        <dependency>
-            <groupId>de.codecentric</groupId>
-            <artifactId>spring-boot-admin-server</artifactId>
-        </dependency>
+	<dependencies>
+		<dependency>
+			<groupId>de.codecentric</groupId>
+			<artifactId>spring-boot-admin-server</artifactId>
+			<version>${sba.version}</version>
+		</dependency>
 		<dependency>
 			<groupId>de.codecentric</groupId>
 			<artifactId>spring-boot-admin-server-ui</artifactId>
+			<version>${sba.version}</version>
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
@@ -159,9 +162,9 @@
 			<resource>
 				<directory>target/dist</directory>
 				<targetPath>META-INF/spring-boot-admin-server-ui</targetPath>
-            </resource>
-            <resource>
-                <directory>src/main/resources</directory>
+			</resource>
+			<resource>
+				<directory>src/main/resources</directory>
 			</resource>
 		</resources>
 	</build>
