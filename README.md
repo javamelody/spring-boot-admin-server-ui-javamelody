@@ -12,6 +12,11 @@ registered application in [SpringBootAdmin v1](http://codecentric.github.io/spri
     <artifactId>spring-boot-admin-server-ui-javamelody</artifactId>
     <version>1.5.7.0</version>
 </dependency>
+<dependency>
+    <groupId>net.bull.javamelody</groupId>
+    <artifactId>javamelody-core</artifactId>
+    <version>1.72.0</version>
+</dependency>
 ```
 
   * Make sure each application that is registered with SBA has [javamelody client](https://github.com/javamelody/javamelody/wiki/SpringBootStarter) support enabled and can be reached at the default endpoint `/monitoring`, with the javamelody client in the pom.xml of your applications:
