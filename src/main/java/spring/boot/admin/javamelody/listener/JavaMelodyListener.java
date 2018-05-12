@@ -1,14 +1,15 @@
 package spring.boot.admin.javamelody.listener;
 
-import net.bull.javamelody.CollectorServlet;
-import de.codecentric.boot.admin.event.ClientApplicationDeregisteredEvent;
-import de.codecentric.boot.admin.event.ClientApplicationRegisteredEvent;
-import de.codecentric.boot.admin.model.Application;
+import java.io.IOException;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.event.EventListener;
 
-import java.io.IOException;
+import de.codecentric.boot.admin.event.ClientApplicationDeregisteredEvent;
+import de.codecentric.boot.admin.event.ClientApplicationRegisteredEvent;
+import de.codecentric.boot.admin.model.Application;
+import net.bull.javamelody.CollectorServlet;
 
 /**
  * Listener class to register and unregister applications. Using the {@link EventListener annotations} we receive notifications from service discovery.
@@ -25,7 +26,7 @@ public class JavaMelodyListener {
         try {
             CollectorServlet.addCollectorApplication(applicationName, application.getServiceUrl());
             LOGGER.info("Added application {} to javamelody", applicationName);
-        } catch (IOException e) {
+        } catch (final IOException e) {
             LOGGER.warn("Failed to register application {} to javamelody" + applicationName);
         }
     }
@@ -38,7 +39,7 @@ public class JavaMelodyListener {
         try {
             CollectorServlet.removeCollectorApplication(applicationName);
             LOGGER.info("Removed application {} from javamelody", applicationName);
-        } catch (IOException e) {
+        } catch (final IOException e) {
             LOGGER.warn("Failed to unregister application {} from javamelody" + applicationName);
         }
     }

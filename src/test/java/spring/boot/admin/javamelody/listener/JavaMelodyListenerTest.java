@@ -1,14 +1,15 @@
 package spring.boot.admin.javamelody.listener;
 
-import de.codecentric.boot.admin.event.ClientApplicationDeregisteredEvent;
-import de.codecentric.boot.admin.event.ClientApplicationRegisteredEvent;
-import de.codecentric.boot.admin.model.Application;
+import static org.mockito.Mockito.when;
+import static org.mockito.MockitoAnnotations.initMocks;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
 
-import static org.mockito.Mockito.when;
-import static org.mockito.MockitoAnnotations.initMocks;
+import de.codecentric.boot.admin.event.ClientApplicationDeregisteredEvent;
+import de.codecentric.boot.admin.event.ClientApplicationRegisteredEvent;
+import de.codecentric.boot.admin.model.Application;
 
 public class JavaMelodyListenerTest {
 

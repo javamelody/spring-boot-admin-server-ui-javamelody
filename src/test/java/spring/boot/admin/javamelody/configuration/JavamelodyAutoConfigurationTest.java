@@ -1,11 +1,11 @@
 package spring.boot.admin.javamelody.configuration;
 
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
-
-import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
 
 public class JavamelodyAutoConfigurationTest {
 
