@@ -1,7 +1,7 @@
 JavaMelody UI Module for SpringBootAdmin v1
 =========================
 
-This module adds a view that displays the javamelody monitoring for each
+This module adds a view of the javamelody monitoring for each
 registered application in [SpringBootAdmin v1](http://codecentric.github.io/spring-boot-admin/1.5.7/) (SBA)
 
   * Add the module to your classpath in the pom.xml of your SBA server:
