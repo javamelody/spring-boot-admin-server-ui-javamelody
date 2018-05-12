@@ -13,19 +13,19 @@ import spring.boot.admin.javamelody.listener.JavaMelodyListener;
 @ConditionalOnProperty(prefix = "javamelody", name = "collectserver.enabled", matchIfMissing = true)
 public class JavamelodyAutoConfiguration {
 
-    private static final String CONTEXT_ROOT = "/javamelody";
+	private static final String CONTEXT_ROOT = "/javamelody";
 
-    @Bean
-    public JavaMelodyListener javaMelodyListener() {
-        return new JavaMelodyListener();
-    }
+	@Bean
+	public JavaMelodyListener javaMelodyListener() {
+		return new JavaMelodyListener();
+	}
 
-    @Bean
-    public ServletRegistrationBean collectorServletBean() {
-        final CollectorServlet servlet = new CollectorServlet();
-        final ServletRegistrationBean servletRegistrationBean = new ServletRegistrationBean(servlet);
-        servletRegistrationBean.addUrlMappings(CONTEXT_ROOT);
+	@Bean
+	public ServletRegistrationBean collectorServletBean() {
+		final CollectorServlet servlet = new CollectorServlet();
+		final ServletRegistrationBean servletRegistrationBean = new ServletRegistrationBean(servlet);
+		servletRegistrationBean.addUrlMappings(CONTEXT_ROOT);
 
-        return servletRegistrationBean;
-    }
+		return servletRegistrationBean;
+	}
 }
