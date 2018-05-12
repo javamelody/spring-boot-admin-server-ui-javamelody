@@ -13,7 +13,7 @@ registered application in [SpringBootAdmin v1](http://codecentric.github.io/spri
 </dependency>
 ```
 
-  * Make sure each application that is registered with SBA has javamelody client support enabled and can be reached at the default endpoint `/monitoring`, with the javamelody client in the pom.xml of your applications:
+  * Make sure each application that is registered with SBA has [javamelody client](https://github.com/javamelody/javamelody/wiki/SpringBootStarter) support enabled and can be reached at the default endpoint `/monitoring`, with the javamelody client in the pom.xml of your applications:
 ```xml
 <!-- https://github.com/javamelody/javamelody/wiki/SpringBootStarter -->
 <dependency>
