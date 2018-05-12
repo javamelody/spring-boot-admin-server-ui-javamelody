@@ -1,9 +1,10 @@
-==== JavaMelody UI Module for SpringBootAdmin v1 ====
+JavaMelody UI Module for SpringBootAdmin v1
+=========================
 
 This module adds a view that displays the javamelody overview for each
 registered application in [SpringBootAdmin v1](http://codecentric.github.io/spring-boot-admin/1.5.7/)
 
-. Add the ui module to your classpath:
+  * Add the ui module to your classpath:
 
 pom.xml (spring boot admin)
 ```xml
@@ -14,7 +15,7 @@ pom.xml (spring boot admin)
 </dependency>
 ```
 
-. Make sure each application that is registered with SBA has javamelody client support enabled and can be reached at the default endpoint */monitoring*
+  * Make sure each application that is registered with SBA has javamelody client support enabled and can be reached at the default endpoint */monitoring*
 
 pom.xml (javamelody client)
 ```xml
