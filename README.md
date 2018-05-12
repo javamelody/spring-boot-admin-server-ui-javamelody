@@ -6,6 +6,7 @@ registered application in [SpringBootAdmin v1](http://codecentric.github.io/spri
 
   * Add the ui module to your classpath in the pom.xml of your SBA server:
 ```xml
+<!-- https://github.com/javamelody/spring-boot-admin-server-ui-javamelody -->
 <dependency>
     <groupId>net.bull.javamelody</groupId>
     <artifactId>spring-boot-admin-server-ui-javamelody</artifactId>
