@@ -19,7 +19,7 @@ registered application in [SpringBootAdmin v1](http://codecentric.github.io/spri
 </dependency>
 ```
 
-  * Optionally add parameters for the SBA server in your application.yml or application.properties file. [Available parameters](https://github.com/javamelody/javamelody/wiki/UserGuideAdvanced#2-deployment-of-the-webapp-of-monitoring) are: storage-directory, resolution-seconds, warning-threshold-millis, severe-threshold-millis, graphite-address, influxdb-url, cloudwatch-namespace, datadog-api-key, admin-emails, mail-session, mail-periods. For example in application.yml:
+  * Optionally add parameters for the SBA server in your application.yml or application.properties file. [Available parameters](https://github.com/javamelody/javamelody/wiki/UserGuideAdvanced#2-deployment-of-the-webapp-of-monitoring) are: storage-directory, resolution-seconds, warning-threshold-millis, severe-threshold-millis, graphite-address, influxdb-url, cloudwatch-namespace, datadog-api-key, statsd-address, admin-emails, mail-session, mail-periods. For example in application.yml:
 ```yml
 javamelody:
   collectserver.enabled: true
@@ -37,8 +37,29 @@ javamelody:
 </dependency>
 ```
 
+ * Optionally add parameters for the monitored application(s) in the application.yml or application.properties file(s). Main [available parameters](https://github.com/javamelody/javamelody/wiki/UserGuide#6-optional-parameters) are: allowed-addr-pattern, url-exclude-pattern, http-transform-pattern, sql-transform-pattern, jpa-transform-pattern, spring-transform-pattern, error-transform-pattern, log-transform-pattern, job-transform-pattern, jsp-transform-pattern, log, rum-enabled, sampling-seconds, maven-repositories. For example in application.yml (allowed-addr-pattern is recommended in order to restrict access to the monitoring page to the SBA server and to forbid access to anyone else):
+```yml
+spring.boot.admin:
+  url: http://192.168.1.1:8080  
+
+javamelody:
+  # Enable JavaMelody auto-configuration (optional, default: true)
+  enabled: true
+  # Enable monitoring of Spring services and controllers (optional, default: true)
+  spring-monitoring-enabled: true
+  init-parameters:
+    # restrict access to the monitoring page to the SBA server of ip address 192.168.1.1
+    allowed-addr-pattern: 192\.168\.1\.1
+    # log http requests
+    #log: true
+    # to exclude images, css, fonts and js urls from the monitoring:
+    #url-exclude-pattern: (/webjars/.*|/css/.*|/images/.*|/fonts/.*|/js/.*)
+    # to aggregate digits in http requests
+    #http-transform-pattern: \d+
+```
+
 Latest javamelody version: [![Maven Central](https://maven-badges.herokuapp.com/maven-central/net.bull.javamelody/javamelody-core/badge.svg)](https://maven-badges.herokuapp.com/maven-central/net.bull.javamelody/javamelody-core)
 
 License [ASL](http://www.apache.org/licenses/LICENSE-2.0)
 
-This JavaMelody module is not currently compatible with Spring Boot Admin V2. Volunteers are welcome.
+This JavaMelody module is not currently compatible with Spring Boot Admin 2. Volunteers are welcome. But the JavaMelody Spring Boot Starter is compatible with Spring Boot 2.
