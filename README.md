@@ -15,7 +15,7 @@ pom.xml (spring boot admin)
 </dependency>
 ```
 
-  * Make sure each application that is registered with SBA has javamelody client support enabled and can be reached at the default endpoint */monitoring*
+  * Make sure each application that is registered with SBA has javamelody client support enabled and can be reached at the default endpoint `/monitoring`
 
 pom.xml (javamelody client)
 ```xml
