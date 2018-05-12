@@ -20,9 +20,10 @@ public class JavaMelodyConfigurationProperties {
 	/**
 	 * Map of initialization parameters to be passed to the JavaMelody collector
 	 * server. The available parameters are: resolution-seconds, storage-directory,
-	 * log, warning-threshold-millis, severe-threshold-millis, allowed-addr-pattern,
-	 * authorized-users, graphite-address, influxdb-url, cloudwatch-namespace,
-	 * datadog-api-key, admin-emails, mail-session, mail-periods. See
+	 * warning-threshold-millis, severe-threshold-millis, <br/>
+	 * graphite-address, influxdb-url, cloudwatch-namespace, datadog-api-key, <br/>
+	 * admin-emails, mail-session, mail-periods. <br/>
+	 * See
 	 * https://github.com/javamelody/javamelody/wiki/UserGuideAdvanced#optional-centralization-server-setup
 	 */
 	private Map<String, String> initParameters = new HashMap<>();

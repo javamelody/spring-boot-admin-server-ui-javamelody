@@ -33,12 +33,12 @@ public class JavaMelodyAutoConfiguration {
 		for (final Map.Entry<String, String> entry : properties.getInitParameters().entrySet()) {
 			servletContext.setAttribute(Parameters.PARAMETER_SYSTEM_PREFIX + entry.getKey(), entry.getValue());
 		}
-		// CollectorServlet.init(ServletConfig) will only be called on the first request,
-		// so initialize the servletContext now
-		Parameters.initialize(servletContext);
 
 		final CollectorServlet servlet = new CollectorServlet();
 		final ServletRegistrationBean servletRegistrationBean = new ServletRegistrationBean(servlet);
+		// setLoadOnStartup otherwise CollectorServlet.init(ServletConfig) is not called
+		// before the first request
+		servletRegistrationBean.setLoadOnStartup(1);
 		servletRegistrationBean.addUrlMappings(CONTEXT_ROOT);
 
 		return servletRegistrationBean;
