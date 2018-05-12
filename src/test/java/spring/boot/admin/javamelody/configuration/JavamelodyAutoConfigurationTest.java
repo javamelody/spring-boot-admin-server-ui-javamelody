@@ -7,13 +7,13 @@ import org.junit.Before;
 import org.junit.Test;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 
-public class JavamelodyAutoConfigurationTest {
+public class JavaMelodyAutoConfigurationTest {
 
-	private JavamelodyAutoConfiguration javaMelodyConfiguration;
+	private JavaMelodyAutoConfiguration javaMelodyConfiguration;
 
 	@Before
 	public void setUp() throws Exception {
-		javaMelodyConfiguration = new JavamelodyAutoConfiguration();
+		javaMelodyConfiguration = new JavaMelodyAutoConfiguration();
 	}
 
 	@Test

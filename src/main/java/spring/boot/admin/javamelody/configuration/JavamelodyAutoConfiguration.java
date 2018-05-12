@@ -11,7 +11,7 @@ import spring.boot.admin.javamelody.listener.JavaMelodyListener;
 // Always run, if you depend on this module, you will get this autoconfiguration
 @Configuration
 @ConditionalOnProperty(prefix = "javamelody", name = "collectserver.enabled", matchIfMissing = true)
-public class JavamelodyAutoConfiguration {
+public class JavaMelodyAutoConfiguration {
 
 	private static final String CONTEXT_ROOT = "/javamelody";
 
