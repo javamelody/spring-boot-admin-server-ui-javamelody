@@ -11,6 +11,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import net.bull.javamelody.CollectorServlet;
+import net.bull.javamelody.internal.common.Parameters;
 import spring.boot.admin.javamelody.listener.JavaMelodyListener;
 
 // Always run, if you depend on this module, you will get this autoconfiguration
@@ -28,9 +29,13 @@ public class JavaMelodyAutoConfiguration {
 	@Bean
 	public ServletRegistrationBean collectorServletBean(JavaMelodyConfigurationProperties properties,
 			ServletContext servletContext) {
+		// give parameters from application.properties/yml to javamelody
 		for (final Map.Entry<String, String> entry : properties.getInitParameters().entrySet()) {
-			servletContext.setAttribute(entry.getKey(), entry.getValue());
+			servletContext.setAttribute(Parameters.PARAMETER_SYSTEM_PREFIX + entry.getKey(), entry.getValue());
 		}
+		// CollectorServlet.init(ServletConfig) will only be called on the first request,
+		// so initialize the servletContext now
+		Parameters.initialize(servletContext);
 
 		final CollectorServlet servlet = new CollectorServlet();
 		final ServletRegistrationBean servletRegistrationBean = new ServletRegistrationBean(servlet);
