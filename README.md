@@ -62,4 +62,4 @@ Latest javamelody version: [![Maven Central](https://maven-badges.herokuapp.com/
 
 License [ASL](http://www.apache.org/licenses/LICENSE-2.0)
 
-This JavaMelody module is not currently compatible with Spring Boot Admin 2. Volunteers are welcome. But the JavaMelody Spring Boot Starter is compatible with Spring Boot 2.
+This JavaMelody module is not currently compatible with Spring Boot Admin 2. Volunteers are welcome. But the [JavaMelody Spring Boot Starter](https://github.com/javamelody/javamelody/wiki/SpringBootStarter) is compatible with Spring Boot 2.
