@@ -10,7 +10,7 @@
 
 	<groupId>net.bull.javamelody</groupId>
 	<artifactId>spring-boot-admin-server-ui-javamelody</artifactId>
-	<version>1.5.7.0</version>
+	<version>1.5.7.1</version>
 
 	<properties>
 		<javamelody.version>1.72.0</javamelody.version>
