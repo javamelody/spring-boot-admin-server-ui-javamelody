@@ -10,7 +10,7 @@ registered application in [SpringBootAdmin v1](http://codecentric.github.io/spri
 <dependency>
     <groupId>net.bull.javamelody</groupId>
     <artifactId>spring-boot-admin-server-ui-javamelody</artifactId>
-    <version>1.5.7.0</version>
+    <version>1.5.7.1</version>
 </dependency>
 <dependency>
     <groupId>net.bull.javamelody</groupId>
