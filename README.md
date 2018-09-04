@@ -15,7 +15,7 @@ registered application in [SpringBootAdmin v1](http://codecentric.github.io/spri
 <dependency>
     <groupId>net.bull.javamelody</groupId>
     <artifactId>javamelody-core</artifactId>
-    <version>1.73.1</version>
+    <version>1.74.0</version>
 </dependency>
 ```
 
