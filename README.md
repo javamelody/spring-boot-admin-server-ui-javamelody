@@ -33,7 +33,7 @@ javamelody:
 <dependency>
     <groupId>net.bull.javamelody</groupId>
     <artifactId>javamelody-spring-boot-starter</artifactId>
-    <version>1.73.1</version>
+    <version>1.74.0</version>
 </dependency>
 ```
 
