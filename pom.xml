@@ -13,7 +13,7 @@
 	<version>1.5.7.1</version>
 
 	<properties>
-		<javamelody.version>1.72.0</javamelody.version>
+		<javamelody.version>1.75.0</javamelody.version>
 		<sba.version>1.5.7</sba.version>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
