@@ -10,12 +10,12 @@ registered application in [SpringBootAdmin v1](http://codecentric.github.io/spri
 <dependency>
     <groupId>net.bull.javamelody</groupId>
     <artifactId>spring-boot-admin-server-ui-javamelody</artifactId>
-    <version>1.5.7.1</version>
+    <version>1.5.7.2</version>
 </dependency>
 <dependency>
     <groupId>net.bull.javamelody</groupId>
     <artifactId>javamelody-core</artifactId>
-    <version>1.74.0</version>
+    <version>1.75.0</version>
 </dependency>
 ```
 
@@ -33,7 +33,7 @@ javamelody:
 <dependency>
     <groupId>net.bull.javamelody</groupId>
     <artifactId>javamelody-spring-boot-starter</artifactId>
-    <version>1.74.0</version>
+    <version>1.75.0</version>
 </dependency>
 ```
 
