@@ -62,9 +62,6 @@
 			<archive>http://groups.google.com/group/javamelody</archive>
 		</mailingList>
 	</mailingLists>
-	<prerequisites>
-		<maven>3.0.4</maven>
-	</prerequisites>
 
 	<dependencies>
 		<dependency>
