@@ -102,7 +102,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
-			<version>RELEASE</version>
+			<version>1.5.9.RELEASE</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
